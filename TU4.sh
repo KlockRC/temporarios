@@ -1395,7 +1395,7 @@ while IFS=":" read -r nome senha; do
     nome_sem_espacos=$(echo "$nome" | sed 's/^[ \t]*//;s/[ \t]*$//')
 
     # Substituir espaços por "_"
-    nome_formatado=$(echo "$nome_sem_espacos" | tr ' ' '_')
+    nome_formatado=$(echo "$nome_sem_espacos" | tr ' ' '')
 
     # Remover acentos e caracteres especiais
     nome_formatado=$(echo "$nome_formatado" | iconv -f utf-8 -t ascii//TRANSLIT | tr -cd '[:alnum:]_')
